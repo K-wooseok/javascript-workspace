@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <body>
+    <script>
+      /**
+       * Promise 객체
+       * - State: 대기(Pending), 성공(Fulfilled), 실패(Rejected)
+       * - Result: 비어있음, 결괏값, 에러 객체
+       *
+       * executor 함수: 생성자 함수가 호출될 때 실행됨
+       */
+
+      if (false) {
+        // case 1
+        new Promise((resolve, reject) => {
+          console.log("비동기 작업");
+        });
+
+        console.log(promise);
+      }
+
+      if (false) {
+        // case 2
+        new Promise((resolve, reject) => {
+          setTimeout(() => {
+            //   const data = { name: "오일남" };
+            const data = null;
+            if (data) {
+              console.log("네트워크 요청 성공!");
+              resolve(data);
+            } else {
+              reject(new Error("네트워크 문제 발생!"));
+            }
+          }, 2000);
+        });
+
+        console.log(promise);
+
+        setTimeout(() => {
+          console.log(promise);
+        }, 3000);
+      }
+
+      // case 3
+      // Promise 객체를 사용할 함수 정의
+      function getData() {
+        const promise = new Promise();
+      }
+    </script>
+  </body>
+</html>

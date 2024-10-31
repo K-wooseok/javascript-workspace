@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <h2>지역 변수를 사용한 Counting</h2>
+    <button id="increase">+</button>
+    <p id="Counting">0</p>
+    <script>
+      let increaseBtn = document.getElementById("increase");
+      let count = document.getElementById("count");
+
+      function increase() {
+        let counter = 0;
+        return ++counter;
+      }
+
+      increaseBtn.onclick = function () {
+        count.innerHTML = increase();
+      };
+    </script>
+  </body>
+</html>
